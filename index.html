@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Reviews</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo-container">
+            <h1 class="logo">🍽️ BiteCritics</h1>
+        </div>
+        <button id="add-review-btn" class="primary-btn">Add Review</button>
+    </header>
+
+    <main class="container">
+        <section class="filters-section">
+            <div class="filter-group">
+                <button class="filter-btn active" data-filter="all">All Reviews</button>
+                <button class="filter-btn" data-filter="5-stars">⭐ 5 Stars Only</button>
+                <button class="filter-btn" data-filter="recent">🕒 Most Recent</button>
+            </div>
+        </section>
+
+        <section id="reviews-container" class="reviews-grid">
+            <!-- Dynamic review cards will be inserted here via JavaScript -->
+        </section>
+    </main>
+
+    <!-- Details Modal Popup -->
+    <div id="review-modal" class="modal hidden">
+        <div class="modal-content">
+            <span id="close-modal" class="close-btn">&times;</span>
+            <img id="modal-img" src="" alt="Restaurant Image">
+            <h2 id="modal-title"></h2>
+            <div id="modal-stars" class="stars"></div>
+            <p id="modal-review"></p>
+            <span id="modal-date" class="date"></span>
+        </div>
+    </div>
+
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

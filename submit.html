@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit a Review - BiteCritics</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo-container">
+            <h1 class="logo">🍽️ BiteCritics</h1>
+        </div>
+        <a href="index.html" class="secondary-btn">Back to Home</a>
+    </header>
+
+    <main class="container form-container">
+        <h2>Add Your Restaurant Review</h2>
+        <form id="review-form">
+            <div class="input-group">
+                <label for="restaurant-name">Restaurant Name</label>
+                <input type="text" id="restaurant-name" placeholder="e.g., Gourmet Bistro" required>
+            </div>
+
+            <div class="input-group">
+                <label for="restaurant-image">Image URL</label>
+                <input type="url" id="restaurant-image" placeholder="Paste image URL here (placeholder)" required>
+            </div>
+
+            <div class="input-group">
+                <label>Rating (Stars)</label>
+                <div class="star-rating-picker" id="star-picker">
+                    <span data-value="1">★</span>
+                    <span data-value="2">★</span>
+                    <span data-value="3">★</span>
+                    <span data-value="4">★</span>
+                    <span data-value="5">★</span>
+                </div>
+                <input type="hidden" id="rating-value" value="5" required>
+            </div>
+
+            <div class="input-group">
+                <label for="restaurant-review">Your Review</label>
+                <textarea id="restaurant-review" rows="5" placeholder="Type your review here..." required></textarea>
+            </div>
+
+            <button type="submit" class="primary-btn submit-btn">Submit Review</button>
+        </form>
+    </main>
+
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
